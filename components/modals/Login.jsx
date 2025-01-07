@@ -11,7 +11,7 @@ const handleLogin=async(e)=>{
     password:e.target.password.value,
   }
   try{
-    const res = await axios.post("http://localhost:3001/api/user/login",data)
+    const res = await axios.post("https://ecomus-be.onrender.com/api/user/login",data)
     if(res.status==200){
       alert(res.data.message)
       sessionStorage.setItem('token',res.data.token)

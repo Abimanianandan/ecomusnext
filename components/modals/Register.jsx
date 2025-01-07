@@ -14,7 +14,7 @@ export default function Register() {
         };
 
         try {         
-            const res = await axios.post(`http://localhost:3001/api/user/register`,data );
+            const res = await axios.post(`https://ecomus-be.onrender.com/api/user/register`,data );
             if (res.status === 200) {
                 alert(res.data.message);   
             }
